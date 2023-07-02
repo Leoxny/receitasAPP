@@ -1,9 +1,24 @@
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, SafeAreaView } from 'react-native'
 import React from 'react'
+import { View } from "moti"
 
 export const Logo = () => {
-    return(
-        <View style={styles.logoArea}>
+    return (
+        <View
+            style={styles.logoArea}
+            from={{
+                opacity: 0,
+                translateX: -50,
+            }}
+            animate={{
+                opacity: 1,
+                translateX: 0
+            }}
+            transition={{
+                type: "spring",
+                duration: 850
+            }}
+        >
             <Text>Recetia Fácil</Text>
         </View>
     )
@@ -22,7 +37,7 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 32,
         marginBottom: 8
     },
-    logo:{
+    logo: {
         fontSize: 18,
         fontWeight: 'bold',
         color: '#fff'

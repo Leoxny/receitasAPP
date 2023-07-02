@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { HomeScreen } from "../screens/HomeScreen";
+import { MainStack } from "../routes/MainStack";
 import { FavoritesScreen } from "../screens/FavoritesScreen";
 import { Ionicons } from '@expo/vector-icons'
 
@@ -22,8 +22,8 @@ export const MainTab = () => {
             }}
         >
             <Tab.Screen
-                name="HomeScreen"
-                component={HomeScreen}
+                name="HomeTab"
+                component={MainStack}
                 options={{
                     tabBarIcon: ({ color, size, focused }) => {
                         if(focused){
